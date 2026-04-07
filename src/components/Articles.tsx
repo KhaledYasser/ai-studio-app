@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ARTICLES } from '../constants';
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react';
+import ArticlesPage from './ArticlesPage';
 
 export default function Articles() {
+  const [viewingArticles, setViewingArticles] = useState(false);
+
+  if (viewingArticles) {
+    return <ArticlesPage />;
+  }
+
   return (
     <section id="articles" className="py-24 bg-[#020617]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,20 +19,24 @@ export default function Articles() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Latest Insights</h2>
             <p className="text-slate-400 max-w-xl">Deep dives into the technologies shaping our future, from artificial intelligence to sustainable architecture.</p>
           </div>
-          <button className="text-brand-400 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+          <button 
+            onClick={() => setViewingArticles(true)}
+            className="text-brand-400 font-semibold flex items-center gap-2 hover:gap-3 transition-all"
+          >
             View All Articles <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {ARTICLES.map((article, i) => (
-            <motion.article
+            <motion.button
               key={article.id}
+              onClick={() => setViewingArticles(true)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer text-left"
             >
               <div className="relative aspect-[16/10] overflow-hidden rounded-2xl mb-6 border border-slate-800">
                 <img 
@@ -67,7 +79,7 @@ export default function Articles() {
                   <span className="text-sm font-medium text-slate-300">{article.author.name}</span>
                 </div>
               </div>
-            </motion.article>
+            </motion.button>
           ))}
         </div>
       </div>
