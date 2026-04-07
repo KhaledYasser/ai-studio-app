@@ -13,13 +13,16 @@ export default function AppGallery() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {APPS.map((app, i) => (
-            <motion.div
+            <motion.a
               key={app.id}
+              href={app.link}
+              target={app.link !== '#' ? '_blank' : undefined}
+              rel={app.link !== '#' ? 'noopener noreferrer' : undefined}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row group"
+              className="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row group cursor-pointer hover:shadow-2xl hover:shadow-brand-600/20 transition-all"
             >
               <div className="md:w-2/5 relative overflow-hidden border-r border-slate-800/50">
                 <img 
@@ -66,7 +69,7 @@ export default function AppGallery() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 

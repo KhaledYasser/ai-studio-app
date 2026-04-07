@@ -45,6 +45,15 @@ export const ARTICLES: Article[] = [
 export const APPS: AppProject[] = [
   {
     id: '1',
+    name: 'Invadors',
+    description: 'Classic Space Invaders game built with React. Test your reflexes and defend against endless waves of aliens.',
+    tags: ['React', 'TypeScript', 'Game Dev'],
+    image: '/invadors-logo.png',
+    link: 'http://invadors.pom100.com',
+    status: 'Live'
+  },
+  {
+    id: '2',
     name: 'FluxFlow',
     description: 'A real-time data visualization dashboard for complex IoT networks.',
     tags: ['React', 'D3.js', 'WebSockets'],
@@ -53,7 +62,7 @@ export const APPS: AppProject[] = [
     status: 'Live'
   },
   {
-    id: '2',
+    id: '3',
     name: 'EchoMind',
     description: 'AI-powered note-taking app that automatically categorizes and links your thoughts.',
     tags: ['Next.js', 'OpenAI', 'Tailwind'],
@@ -62,7 +71,7 @@ export const APPS: AppProject[] = [
     status: 'Beta'
   },
   {
-    id: '3',
+    id: '4',
     name: 'NovaPay',
     description: 'Next-generation crypto wallet with biometric security and instant swaps.',
     tags: ['React Native', 'Web3', 'Rust'],
@@ -71,7 +80,7 @@ export const APPS: AppProject[] = [
     status: 'Concept'
   },
   {
-    id: '4',
+    id: '5',
     name: 'ZenithUI',
     description: 'A comprehensive component library designed for high-performance enterprise apps.',
     tags: ['TypeScript', 'Storybook', 'CSS-in-JS'],
