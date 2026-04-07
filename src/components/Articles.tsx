@@ -1,16 +1,12 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ARTICLES } from '../constants';
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react';
-import ArticlesPage from './ArticlesPage';
 
-export default function Articles() {
-  const [viewingArticles, setViewingArticles] = useState(false);
+interface ArticlesProps {
+  onViewAll: () => void;
+}
 
-  if (viewingArticles) {
-    return <ArticlesPage />;
-  }
-
+export default function Articles({ onViewAll }: ArticlesProps) {
   return (
     <section id="articles" className="py-24 bg-[#020617]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +16,7 @@ export default function Articles() {
             <p className="text-slate-400 max-w-xl">Deep dives into the technologies shaping our future, from artificial intelligence to sustainable architecture.</p>
           </div>
           <button 
-            onClick={() => setViewingArticles(true)}
+            onClick={onViewAll}
             className="text-brand-400 font-semibold flex items-center gap-2 hover:gap-3 transition-all"
           >
             View All Articles <ArrowUpRight className="w-4 h-4" />

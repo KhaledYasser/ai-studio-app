@@ -1,17 +1,27 @@
 import { motion } from 'motion/react';
+import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { APPS } from '../constants';
-import { ExternalLink, Github, Layout } from 'lucide-react';
 
-interface AppGalleryProps {
-  onViewAll: () => void;
+interface AppGalleryPageProps {
+  onBack: () => void;
 }
 
-export default function AppGallery({ onViewAll }: AppGalleryProps) {
+export default function AppGalleryPage({ onBack }: AppGalleryPageProps) {
   return (
-    <section id="gallery" className="py-24 bg-[#020617]">
+    <section className="min-h-screen bg-[#020617] pt-24 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          onClick={onBack}
+          className="flex items-center gap-2 text-brand-400 hover:text-brand-300 mb-8 transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          Back to Home
+        </motion.button>
+
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">App Gallery</h2>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">App Gallery</h1>
           <p className="text-slate-400 max-w-2xl mx-auto">A collection of experimental projects and production-ready applications showcasing modern web capabilities.</p>
         </div>
 
@@ -57,7 +67,6 @@ export default function AppGallery({ onViewAll }: AppGalleryProps) {
                     }`}>
                       {app.status}
                     </span>
-                    <Layout className="w-4 h-4 text-slate-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors">{app.name}</h3>
                   <p className="text-slate-400 text-sm leading-relaxed mb-6">
@@ -75,15 +84,6 @@ export default function AppGallery({ onViewAll }: AppGalleryProps) {
               </div>
             </motion.a>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <button 
-            onClick={onViewAll}
-            className="px-8 py-4 bg-slate-900 border border-slate-800 text-slate-400 rounded-xl font-semibold hover:bg-slate-800 hover:text-white transition-all shadow-xl"
-          >
-            View All Apps
-          </button>
         </div>
       </div>
     </section>

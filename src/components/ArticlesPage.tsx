@@ -3,7 +3,11 @@ import { motion } from 'motion/react';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { FULL_ARTICLES } from '../data/articles';
 
-export default function ArticlesPage() {
+interface ArticlesPageProps {
+  onBack: () => void;
+}
+
+export default function ArticlesPage({ onBack }: ArticlesPageProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = selectedId ? FULL_ARTICLES.find(a => a.id === selectedId) : null;
 
@@ -14,7 +18,7 @@ export default function ArticlesPage() {
           <motion.button
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            onClick={() => setSelectedId(null)}
+            onClick={onBack}
             className="flex items-center gap-2 text-brand-400 hover:text-brand-300 mb-8 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
