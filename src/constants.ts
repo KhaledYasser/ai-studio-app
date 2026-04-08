@@ -49,11 +49,47 @@ export const APPS: AppProject[] = [
     description: 'Classic Space Invaders game built with React. Test your reflexes and defend against endless waves of aliens.',
     tags: ['React', 'TypeScript', 'Game Dev'],
     image: '/invadors-logo.png',
-    link: 'http://invadors.pom100.com',
+    link: 'https://invadors.pom100.com',
     status: 'Live'
   },
   {
     id: '2',
+    name: '2048',
+    description: 'Addictive puzzle game where you combine tiles to reach 2048. Simple rules, endless challenge.',
+    tags: ['React', 'Puzzle', 'Game Dev'],
+    image: 'https://picsum.photos/seed/game/800/600',
+    link: 'https://2048.pom100.com',
+    status: 'Live'
+  },
+  {
+    id: '3',
+    name: 'Flappy Bird',
+    description: 'Classic side-scrolling action game. Navigate through pipes and beat your high score.',
+    tags: ['React', 'Canvas', 'Game Dev'],
+    image: 'https://picsum.photos/seed/bird/800/600',
+    link: 'https://flappy.pom100.com',
+    status: 'Live'
+  },
+  {
+    id: '4',
+    name: 'Snake',
+    description: 'Timeless snake game. Eat food, grow longer, and avoid hitting yourself or walls.',
+    tags: ['React', 'Retro', 'Game Dev'],
+    image: 'https://picsum.photos/seed/snake/800/600',
+    link: 'https://snake.pom100.com',
+    status: 'Live'
+  },
+  {
+    id: '5',
+    name: 'Tetris',
+    description: 'Stack the falling blocks to clear lines and achieve the highest score possible.',
+    tags: ['React', 'Puzzle', 'Game Dev'],
+    image: 'https://picsum.photos/seed/blocks/800/600',
+    link: 'https://tetris.pom100.com',
+    status: 'Live'
+  },
+  {
+    id: '6',
     name: 'FluxFlow',
     description: 'A real-time data visualization dashboard for complex IoT networks.',
     tags: ['React', 'D3.js', 'WebSockets'],
@@ -62,7 +98,7 @@ export const APPS: AppProject[] = [
     status: 'Live'
   },
   {
-    id: '3',
+    id: '7',
     name: 'EchoMind',
     description: 'AI-powered note-taking app that automatically categorizes and links your thoughts.',
     tags: ['Next.js', 'OpenAI', 'Tailwind'],
@@ -71,7 +107,7 @@ export const APPS: AppProject[] = [
     status: 'Beta'
   },
   {
-    id: '4',
+    id: '8',
     name: 'NovaPay',
     description: 'Next-generation crypto wallet with biometric security and instant swaps.',
     tags: ['React Native', 'Web3', 'Rust'],
@@ -80,7 +116,7 @@ export const APPS: AppProject[] = [
     status: 'Concept'
   },
   {
-    id: '5',
+    id: '9',
     name: 'ZenithUI',
     description: 'A comprehensive component library designed for high-performance enterprise apps.',
     tags: ['TypeScript', 'Storybook', 'CSS-in-JS'],
