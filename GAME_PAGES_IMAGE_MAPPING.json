@@ -1,0 +1,165 @@
+{
+  "image_mapping": {
+    "version": "1.0",
+    "created": "2026-04-08T23:45:00Z",
+    "purpose": "Gallery to Game Pages Image Integration Map",
+    "instructions": "Use these exact image URLs in both gallery and game pages for consistency",
+    
+    "games": [
+      {
+        "game_id": "invadors",
+        "game_name": "Invadors",
+        "file_naming": "invadors-hero.jpg",
+        "image_url": "https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=1200&h=800&fit=crop",
+        "alt_text": "Neon retro arcade space invaders game with glowing neon lights and digital aesthetic",
+        "responsive_variants": {
+          "mobile": "https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=600&h=400&fit=crop",
+          "tablet": "https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=900&h=600&fit=crop",
+          "desktop": "https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=1200&h=800&fit=crop"
+        },
+        "attribution": "Unsplash - CC0 License",
+        "usage_locations": ["GamePage hero", "Gallery card", "Social previews"]
+      },
+      {
+        "game_id": "2048",
+        "game_name": "2048",
+        "file_naming": "2048-hero.jpg",
+        "image_url": "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=1200&h=800&fit=crop",
+        "alt_text": "Abstract colorful numbered tiles and geometric shapes representing number puzzle game",
+        "responsive_variants": {
+          "mobile": "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600&h=400&fit=crop",
+          "tablet": "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=900&h=600&fit=crop",
+          "desktop": "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=1200&h=800&fit=crop"
+        },
+        "attribution": "Unsplash - CC0 License",
+        "usage_locations": ["GamePage hero", "Gallery card", "Social previews"]
+      },
+      {
+        "game_id": "flappy-bird",
+        "game_name": "Flappy Bird",
+        "file_naming": "flappy-bird-hero.jpg",
+        "image_url": "https://images.unsplash.com/photo-1444464666175-1469f8c6dea0?w=1200&h=800&fit=crop",
+        "alt_text": "Bird in flight against bright blue sky with motion and dynamic energy",
+        "responsive_variants": {
+          "mobile": "https://images.unsplash.com/photo-1444464666175-1469f8c6dea0?w=600&h=400&fit=crop",
+          "tablet": "https://images.unsplash.com/photo-1444464666175-1469f8c6dea0?w=900&h=600&fit=crop",
+          "desktop": "https://images.unsplash.com/photo-1444464666175-1469f8c6dea0?w=1200&h=800&fit=crop"
+        },
+        "attribution": "Unsplash - CC0 License",
+        "usage_locations": ["GamePage hero", "Gallery card", "Social previews"]
+      },
+      {
+        "game_id": "snake",
+        "game_name": "Snake",
+        "file_naming": "snake-hero.jpg",
+        "image_url": "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=1200&h=800&fit=crop",
+        "alt_text": "Green neon grid pattern with retro arcade gaming aesthetic and digital display",
+        "responsive_variants": {
+          "mobile": "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=600&h=400&fit=crop",
+          "tablet": "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=900&h=600&fit=crop",
+          "desktop": "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=1200&h=800&fit=crop"
+        },
+        "attribution": "Unsplash - CC0 License",
+        "usage_locations": ["GamePage hero", "Gallery card", "Social previews"]
+      },
+      {
+        "game_id": "tetris",
+        "game_name": "Tetris",
+        "file_naming": "tetris-hero.jpg",
+        "image_url": "https://images.unsplash.com/photo-1579546929662-711aa33e3881?w=1200&h=800&fit=crop",
+        "alt_text": "Vibrant colorful geometric blocks and patterns stacked in puzzle formation",
+        "responsive_variants": {
+          "mobile": "https://images.unsplash.com/photo-1579546929662-711aa33e3881?w=600&h=400&fit=crop",
+          "tablet": "https://images.unsplash.com/photo-1579546929662-711aa33e3881?w=900&h=600&fit=crop",
+          "desktop": "https://images.unsplash.com/photo-1579546929662-711aa33e3881?w=1200&h=800&fit=crop"
+        },
+        "attribution": "Unsplash - CC0 License",
+        "usage_locations": ["GamePage hero", "Gallery card", "Social previews"]
+      },
+      {
+        "game_id": "slimy",
+        "game_name": "Slimy Soccer",
+        "file_naming": "slimy-soccer-hero.jpg",
+        "image_url": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=800&fit=crop",
+        "alt_text": "Soccer ball in action on green field with dynamic motion and sports intensity",
+        "responsive_variants": {
+          "mobile": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop",
+          "tablet": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=900&h=600&fit=crop",
+          "desktop": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=800&fit=crop"
+        },
+        "attribution": "Unsplash - CC0 License",
+        "usage_locations": ["GamePage hero", "Gallery card", "Social previews"]
+      }
+    ],
+    
+    "implementation_example": {
+      "description": "How to use these URLs in your code",
+      "react_component": "const heroImage = { url: 'https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=1200&h=800&fit=crop', alt: 'Neon retro arcade space invaders game with glowing neon lights and digital aesthetic' };",
+      "html_img_tag": "<img src='https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=1200&h=800&fit=crop' alt='Neon retro arcade space invaders game with glowing neon lights and digital aesthetic' loading='lazy' />",
+      "responsive_html": "<picture><source media='(max-width: 640px)' srcSet='https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=600&h=400&fit=crop'><source media='(max-width: 1024px)' srcSet='https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=900&h=600&fit=crop'><img src='https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=1200&h=800&fit=crop' alt='...' /></picture>"
+    },
+    
+    "constants_example": {
+      "description": "Update your constants.ts APPS array with these images",
+      "example": {
+        "id": "1",
+        "name": "Invadors",
+        "description": "Classic Space Invaders game...",
+        "tags": ["React", "TypeScript", "Game Dev"],
+        "image": "https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=1200&h=800&fit=crop",
+        "link": "/games/invadors",
+        "status": "Live"
+      }
+    },
+    
+    "optimization_tips": [
+      "Use responsive variants (w=600, w=900, w=1200) based on screen size",
+      "Add loading='lazy' attribute for better performance",
+      "Cache images for offline experience (PWA compatible)",
+      "Consider CDN caching for high-traffic scenarios",
+      "Monitor Unsplash API rate limits (1,000 req/hour per IP)",
+      "Compress images to 150-200KB for web delivery",
+      "Use WebP format with fallback for even better performance"
+    ],
+    
+    "license_compliance": {
+      "license": "CC0 - Creative Commons Zero",
+      "source": "Unsplash (unsplash.com)",
+      "requirements": [
+        "No attribution required (but appreciated)",
+        "Free for commercial use",
+        "Free for personal use",
+        "Can modify and redistribute",
+        "No permission needed"
+      ],
+      "suggested_attribution": "Photo from Unsplash - https://unsplash.com"
+    },
+    
+    "file_paths_for_local_storage": {
+      "description": "If you want to download and store images locally",
+      "directory": "/public/images/games/",
+      "files": [
+        "invadors-hero.jpg",
+        "2048-hero.jpg",
+        "flappy-bird-hero.jpg",
+        "snake-hero.jpg",
+        "tetris-hero.jpg",
+        "slimy-soccer-hero.jpg"
+      ],
+      "download_instruction": "Use the HTTPS URLs above to download images directly"
+    },
+    
+    "update_tracking": {
+      "last_updated": "2026-04-08T23:45:00Z",
+      "next_review": "2026-05-08",
+      "checklist": [
+        "All 6 games have valid image URLs",
+        "Images are HTTPS (secure)",
+        "Alt text is descriptive and SEO-friendly",
+        "Responsive variants are included",
+        "CC0 license is confirmed",
+        "Images match game themes"
+      ]
+    }
+  }
+}

@@ -21,3 +21,49 @@ export interface AppProject {
   link: string;
   status: 'Live' | 'Beta' | 'Concept';
 }
+
+export interface GamePageProps {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  heroImage: {
+    url: string;
+    alt: string;
+  };
+  gameLink: string;
+  sourceCodeLink?: string;
+  features: Array<{
+    title: string;
+    description: string;
+    items?: string[];
+  }>;
+  howToPlay: {
+    steps: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  tips: string[];
+  specs: Array<{
+    label: string;
+    value: string;
+  }>;
+  relatedGames?: Array<{
+    id: string;
+    name: string;
+    description: string;
+    image: string;
+    link: string;
+  }>;
+  shareUrls: Array<{
+    icon: string;
+    label: string;
+    url: string;
+  }>;
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+  };
+}

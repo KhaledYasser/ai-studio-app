@@ -1,16 +1,18 @@
 import { motion } from 'motion/react';
 import { Terminal, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-type Page = 'home' | 'articles' | 'gallery';
+type Page = 'home' | 'articles' | 'gallery' | 'game';
 
 interface HeaderProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, gameId?: string) => void;
   currentPage: Page;
 }
 
 export default function Header({ onNavigate, currentPage }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -21,11 +23,14 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
     setIsOpen(false);
   };
 
+  const isOnGamePage = location.pathname.startsWith('/games/');
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <button 
+          <Link 
+            to="/"
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
@@ -33,16 +38,17 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
               <Terminal className="text-white w-5 h-5" />
             </div>
             <span className="font-display font-bold text-xl tracking-tight text-white">TechNexus</span>
-          </button>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <button 
+            <Link 
+              to="/"
               onClick={() => handleNavClick('home')}
-              className={`text-sm font-medium transition-colors ${currentPage === 'home' ? 'text-brand-400' : 'text-slate-400 hover:text-brand-400'}`}
+              className={`text-sm font-medium transition-colors ${!isOnGamePage && currentPage === 'home' ? 'text-brand-400' : 'text-slate-400 hover:text-brand-400'}`}
             >
               Home
-            </button>
+            </Link>
             <button 
               onClick={() => handleNavClick('articles')}
               className={`text-sm font-medium transition-colors ${currentPage === 'articles' ? 'text-brand-400' : 'text-slate-400 hover:text-brand-400'}`}
@@ -74,12 +80,13 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-[#020617] border-b border-slate-800 px-4 py-6 space-y-4"
         >
-          <button 
+          <Link 
+            to="/"
             onClick={() => handleNavClick('home')}
             className="block text-base font-medium text-slate-400 w-full text-left"
           >
             Home
-          </button>
+          </Link>
           <button 
             onClick={() => handleNavClick('articles')}
             className="block text-base font-medium text-slate-400 w-full text-left"

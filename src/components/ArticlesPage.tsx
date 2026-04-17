@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
-import { FULL_ARTICLES } from '../data/articles';
+import { ENHANCED_ARTICLES } from '../data/articles';
 
 interface ArticlesPageProps {
   onBack: () => void;
@@ -9,7 +9,7 @@ interface ArticlesPageProps {
 
 export default function ArticlesPage({ onBack }: ArticlesPageProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const selected = selectedId ? FULL_ARTICLES.find(a => a.id === selectedId) : null;
+  const selected = selectedId ? ENHANCED_ARTICLES.find(a => a.id === selectedId) : null;
 
   if (selected) {
     return (
@@ -108,7 +108,7 @@ export default function ArticlesPage({ onBack }: ArticlesPageProps) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {FULL_ARTICLES.map((article, i) => (
+          {ENHANCED_ARTICLES.map((article, i) => (
             <motion.button
               key={article.id}
               onClick={() => setSelectedId(article.id)}
