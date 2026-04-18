@@ -69,7 +69,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ delay: 0.3 }}
             className="mt-8 text-sm text-slate-500"
           >
-            ⭐ 6 Games Available | 📖 3+ Articles | 🚀 Always Innovating
+            ⭐ Games | 📖 Articles | 🚀 Always Innovating
           </motion.p>
         </motion.div>
 

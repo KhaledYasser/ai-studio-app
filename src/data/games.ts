@@ -5,12 +5,12 @@ export const GAMES: Record<string, GamePageProps> = {
     id: 'invadors',
     name: 'Invadors',
     tagline: 'Classic Space Invaders - Defend Earth from Alien Invasion',
-    description: `Invadors is a modernized take on the classic Space Invaders arcade game. Command your laser cannon at the bottom of the screen to shoot down waves of descending aliens. With each destroyed invader, the remaining aliens accelerate, increasing the intensity and challenge. This timeless arcade experience tests your reflexes, timing, and strategic thinking as you race against waves of progressively faster enemies. Perfect for quick gaming sessions or extended arcade marathons, Invadors captures the essence of retro gaming while featuring smooth controls and vibrant neon aesthetics that bring the arcade cabinet experience to your screen.`,
+    description: 'Defend Earth from waves of alien invaders in this classic arcade shooter. Move your cannon, shoot down the enemy fleet, and survive as the difficulty increases with each wave.',
     heroImage: {
       url: 'https://images.unsplash.com/photo-1538481143235-e7ad196bcc86?w=1200&h=800&fit=crop',
       alt: 'Neon retro arcade space invaders game with glowing neon lights and digital aesthetic'
     },
-    gameLink: 'https://invadors.pom100.com',
+    gameLink: '/games/invadors',
     sourceCodeLink: 'https://github.com/yourusername/invadors-game',
     features: [
       {
@@ -89,7 +89,7 @@ export const GAMES: Record<string, GamePageProps> = {
       url: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=1200&h=800&fit=crop',
       alt: 'Abstract colorful numbered tiles and geometric shapes representing number puzzle game'
     },
-    gameLink: 'https://2048.pom100.com',
+    gameLink: '/games/2048',
     sourceCodeLink: 'https://github.com/yourusername/2048-game',
     features: [
       {
@@ -168,7 +168,8 @@ export const GAMES: Record<string, GamePageProps> = {
       url: 'https://images.unsplash.com/photo-1444464666175-1469f8c6dea0?w=1200&h=800&fit=crop',
       alt: 'Bird in flight against bright blue sky with motion and dynamic energy'
     },
-    gameLink: 'https://flappy.pom100.com',
+    gameLink: '/games/flappy-bird',
+    gameComponent: 'flappy-bird',
     sourceCodeLink: 'https://github.com/yourusername/flappy-bird-game',
     features: [
       {
@@ -247,7 +248,7 @@ export const GAMES: Record<string, GamePageProps> = {
       url: 'https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=1200&h=800&fit=crop',
       alt: 'Green neon grid pattern with retro arcade gaming aesthetic and digital display'
     },
-    gameLink: 'https://snake.pom100.com',
+    gameLink: '/games/snake',
     sourceCodeLink: 'https://github.com/yourusername/snake-game',
     features: [
       {

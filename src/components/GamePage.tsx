@@ -4,6 +4,7 @@
  */
 
 import { GamePageProps } from '../types';
+import { GameEmbed } from './GameEmbed';
 
 export default function GamePage({ game }: { game: GamePageProps }) {
   const {
@@ -29,21 +30,28 @@ export default function GamePage({ game }: { game: GamePageProps }) {
       
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
-        <div className="relative h-96 md:h-[500px] w-full">
+        <div className="relative h-64 md:h-80 w-full">
           <img
             src={heroImage.url}
             alt={heroImage.alt}
             loading="lazy"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+          <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-lg">
               {name}
             </h1>
-            <p className="text-xl md:text-2xl text-white drop-shadow-lg">
+            <p className="text-lg md:text-xl text-white drop-shadow-lg max-w-2xl px-4">
               {tagline}
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Game Play Section */}
+      <section className="bg-gray-50 dark:bg-gray-900 py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <GameEmbed gameId={id} />
         </div>
       </section>
 

@@ -10,6 +10,7 @@ export interface Article {
     avatar: string;
   };
   image: string;
+  tags?: string[];
 }
 
 export interface AppProject {
@@ -61,6 +62,7 @@ export interface GamePageProps {
     label: string;
     url: string;
   }>;
+  gameComponent?: string;
   seo: {
     title: string;
     description: string;

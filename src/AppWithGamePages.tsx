@@ -51,11 +51,11 @@ export default function App() {
           <>
             <Hero onNavigate={navigate} />
             <Articles onViewAll={() => navigate('articles')} />
-            <AppGallery onViewAll={() => navigate('gallery')} onGameSelect={navigateToGame} />
+            <AppGallery onViewAll={() => navigate('gallery')} />
           </>
         )}
         {state.currentPage === 'articles' && <ArticlesPage onBack={() => navigate('home')} />}
-        {state.currentPage === 'gallery' && <AppGalleryPage onBack={() => navigate('home')} onGameSelect={navigateToGame} />}
+        {state.currentPage === 'gallery' && <AppGalleryPage onBack={() => navigate('home')} />}
         {state.currentPage === 'game' && state.selectedGameId && (
           <div className="flex flex-col">
             <GamePage game={{
