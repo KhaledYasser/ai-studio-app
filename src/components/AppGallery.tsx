@@ -5,6 +5,7 @@ import { ExternalLink, Github, Layout } from 'lucide-react';
 
 interface AppGalleryProps {
   onViewAll: () => void;
+  onGameSelect?: (gameId: string) => void;
 }
 
 // Game IDs that should use the game landing page instead of direct URL
@@ -22,10 +23,10 @@ const APP_TO_GAME_ID: Record<string, string> = {
 
 export default function AppGallery({ onViewAll }: AppGalleryProps) {
   return (
-    <section id="gallery" className="py-24 bg-[#020617]">
+    <section id="gallery" className="py-24 bg-[#090f15]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">App Gallery</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wide">App Gallery</h2>
           <p className="text-slate-400 max-w-2xl mx-auto">A collection of experimental projects and production-ready applications showcasing modern web capabilities.</p>
         </div>
 
@@ -41,11 +42,11 @@ export default function AppGallery({ onViewAll }: AppGalleryProps) {
               ? { to: href as any }
               : { to: '#' };
 
-            const commonClassNames = "glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row group cursor-pointer hover:shadow-2xl hover:shadow-brand-600/20 transition-all";
+            const commonClassNames = "synthetic-card rounded-xl overflow-hidden flex flex-col md:flex-row group cursor-pointer border-l-2 border-transparent hover:border-[#81ecff] transition-all";
 
             const content = (
               <>
-                <div className="md:w-2/5 relative overflow-hidden border-r border-slate-800/50">
+                <div className="md:w-2/5 relative overflow-hidden border-r border-[#1c2430]">
                   <img 
                     src={app.image} 
                     alt={app.name}
@@ -78,19 +79,19 @@ export default function AppGallery({ onViewAll }: AppGalleryProps) {
                   </div>
                 </div>
 
-                <div className="p-8 md:w-3/5 flex flex-col justify-between bg-slate-900/20">
+                <div className="p-8 md:w-3/5 flex flex-col justify-between bg-[#121820]">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
+                      <span className={`px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider border ${
                         app.status === 'Live' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' :
                         app.status === 'Beta' ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' :
-                        'bg-slate-500/10 text-slate-400 border-slate-500/20'
+                        'bg-[#1c2430] text-slate-400 border-[#1c2430]'
                       }`}>
                         {app.status}
                       </span>
                       <Layout className="w-4 h-4 text-slate-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors">{app.name}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#81ecff] transition-colors uppercase">{app.name}</h3>
                     <p className="text-slate-400 text-sm leading-relaxed mb-6">
                       {app.description}
                     </p>
@@ -98,7 +99,7 @@ export default function AppGallery({ onViewAll }: AppGalleryProps) {
 
                   <div className="flex flex-wrap gap-2">
                     {app.tags.map(tag => (
-                      <span key={tag} className="text-[11px] font-medium text-slate-500 bg-slate-800/50 px-2 py-1 rounded-md border border-slate-700/50">
+                      <span key={tag} className="text-[11px] font-medium text-[#81ecff] bg-[#81ecff]/10 px-2 py-1 rounded-full border border-[#81ecff]/20 uppercase tracking-wide">
                         {tag}
                       </span>
                     ))}
@@ -141,7 +142,7 @@ export default function AppGallery({ onViewAll }: AppGalleryProps) {
         <div className="mt-16 text-center">
           <button 
             onClick={onViewAll}
-            className="px-8 py-4 bg-slate-900 border border-slate-800 text-slate-400 rounded-xl font-semibold hover:bg-slate-800 hover:text-white transition-all shadow-xl"
+            className="px-8 py-4 bg-[#121820] border border-[#1c2430] text-[#81ecff] rounded-xl font-semibold hover:bg-[#1c2430] hover:text-white transition-all shadow-xl uppercase tracking-wide"
           >
             View All Apps
           </button>

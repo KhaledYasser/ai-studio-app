@@ -5,6 +5,7 @@ import { APPS } from '../constants';
 
 interface AppGalleryPageProps {
   onBack: () => void;
+  onGameSelect?: (gameId: string) => void;
 }
 
 // Game IDs that should use the game landing page instead of direct URL

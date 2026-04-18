@@ -8,16 +8,16 @@ interface ArticlesProps {
 
 export default function Articles({ onViewAll }: ArticlesProps) {
   return (
-    <section id="articles" className="py-24 bg-[#020617]">
+    <section id="articles" className="py-24 bg-[#090f15]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Latest Insights</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wide">Latest Insights</h2>
             <p className="text-slate-400 max-w-xl">Deep dives into the technologies shaping our future, from artificial intelligence to sustainable architecture.</p>
           </div>
           <button 
             onClick={onViewAll}
-            className="text-brand-400 font-semibold flex items-center gap-2 hover:gap-3 transition-all"
+            className="text-[#81ecff] font-semibold flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-wide"
           >
             View All Articles <ArrowUpRight className="w-4 h-4" />
           </button>
@@ -25,16 +25,15 @@ export default function Articles({ onViewAll }: ArticlesProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {ARTICLES.map((article, i) => (
-            <motion.button
+            <motion.div
               key={article.id}
-              onClick={() => setViewingArticles(true)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group cursor-pointer text-left"
+              className="synthetic-card p-4 rounded-xl group cursor-pointer text-left border-l-2 border-transparent hover:border-[#81ecff]"
             >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl mb-6 border border-slate-800">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-lg mb-6">
                 <img 
                   src={article.image} 
                   alt={article.title}
@@ -42,14 +41,14 @@ export default function Articles({ onViewAll }: ArticlesProps) {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-slate-900/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider rounded-full border border-slate-700">
+                  <span className="px-3 py-1 bg-[#121820]/90 backdrop-blur-sm text-[#81ecff] text-[10px] font-bold uppercase tracking-wider rounded-md border border-[#81ecff]/20">
                     {article.category}
                   </span>
                 </div>
               </div>
               
               <div className="space-y-3">
-                <div className="flex items-center gap-4 text-xs text-slate-500 font-medium">
+                <div className="flex items-center gap-4 text-xs text-slate-500 font-medium uppercase tracking-wide">
                   <span className="flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5" />
                     {article.date}
@@ -59,7 +58,7 @@ export default function Articles({ onViewAll }: ArticlesProps) {
                     {article.readTime}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-white group-hover:text-brand-400 transition-colors leading-snug">
+                <h3 className="text-xl font-bold text-white group-hover:text-[#81ecff] transition-colors leading-snug uppercase">
                   {article.title}
                 </h3>
                 <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed">
@@ -75,7 +74,7 @@ export default function Articles({ onViewAll }: ArticlesProps) {
                   <span className="text-sm font-medium text-slate-300">{article.author.name}</span>
                 </div>
               </div>
-            </motion.button>
+            </motion.div>
           ))}
         </div>
       </div>

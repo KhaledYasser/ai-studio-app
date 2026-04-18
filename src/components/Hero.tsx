@@ -10,9 +10,8 @@ export default function Hero({ onNavigate }: HeroProps) {
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background Accents */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full -z-10">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-600/20 rounded-full blur-[120px] opacity-30 animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] opacity-30 animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] opacity-20" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#81ecff]/10 rounded-full blur-[120px] opacity-30 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#10d5ff]/10 rounded-full blur-[120px] opacity-30 animate-pulse" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -21,14 +20,14 @@ export default function Hero({ onNavigate }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-brand-500/10 to-blue-500/10 text-brand-400 text-xs font-semibold mb-6 border border-brand-500/30 hover:border-brand-500/60 transition-all">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121820] text-[#81ecff] text-xs font-semibold mb-6 border border-[#81ecff]/30 hover:border-[#81ecff]/60 transition-all">
             <Sparkles className="w-3 h-3 animate-spin" />
             🚀 Welcome to TechNexus
           </span>
           
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-[1.1] animate-fade-in">
+          <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-[1.1] animate-fade-in uppercase">
             Where Code 💻 Meets <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-blue-400 to-purple-400 animate-pulse">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#81ecff] to-[#10d5ff] animate-pulse">
               🎮 Pure Innovation
             </span>
           </h1>
@@ -44,9 +43,9 @@ export default function Hero({ onNavigate }: HeroProps) {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.button 
               onClick={() => onNavigate('articles')}
-              whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(59, 130, 246, 0.3)' }}
+              whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(129, 236, 255, 0.2)' }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-500 to-brand-600 text-white rounded-xl font-bold hover:from-brand-600 hover:to-brand-700 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-brand-600/50"
+              className="w-full sm:w-auto px-8 py-4 bg-[#81ecff] text-[#090f15] rounded-xl font-bold hover:bg-[#10d5ff] transition-all flex items-center justify-center gap-2 group shadow-lg shadow-[#81ecff]/30 uppercase tracking-wide"
             >
               📚 Read Articles
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -54,9 +53,9 @@ export default function Hero({ onNavigate }: HeroProps) {
             
             <motion.button 
               onClick={() => onNavigate('gallery')}
-              whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(139, 92, 246, 0.3)' }}
+              whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(16, 213, 255, 0.2)' }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white border border-purple-500/50 rounded-xl font-bold hover:from-purple-700 hover:to-blue-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-purple-600/30"
+              className="w-full sm:w-auto px-8 py-4 bg-[#121820] text-[#10d5ff] border border-[#10d5ff]/50 rounded-xl font-bold hover:bg-[#1c2430] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#10d5ff]/20 uppercase tracking-wide"
             >
               🎮 Play Games
               <GamepadIcon className="w-5 h-5" />
@@ -88,9 +87,9 @@ export default function Hero({ onNavigate }: HeroProps) {
             <motion.div 
               key={i} 
               whileHover={{ scale: 1.05, y: -5 }}
-              className="glass-card p-6 rounded-2xl text-left group cursor-pointer hover:border-brand-500/50 transition-all"
+              className="synthetic-card p-6 rounded-2xl text-left group cursor-pointer transition-all border-l-2 border-transparent hover:border-[#81ecff]"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-brand-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-brand-300 mb-4 group-hover:from-brand-500/40 group-hover:to-blue-500/40 transition-all">
+              <div className="w-12 h-12 bg-[#81ecff]/10 rounded-xl flex items-center justify-center text-[#81ecff] mb-4 group-hover:bg-[#81ecff]/20 transition-all">
                 {feature.icon}
               </div>
               <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
