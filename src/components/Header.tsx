@@ -26,7 +26,7 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
   const isOnGamePage = location.pathname.startsWith('/games/');
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#090f15]/80 backdrop-blur-xl border-b border-[#1c2430]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link 
@@ -34,8 +34,8 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center shadow-lg shadow-brand-600/20">
-              <Terminal className="text-white w-5 h-5" />
+            <div className="w-8 h-8 bg-[#81ecff] rounded-lg flex items-center justify-center shadow-lg shadow-[#81ecff]/20">
+              <Terminal className="text-[#090f15] w-5 h-5" />
             </div>
             <span className="font-display font-bold text-xl tracking-tight text-white">TechNexus</span>
           </Link>
@@ -78,7 +78,7 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-[#020617] border-b border-slate-800 px-4 py-6 space-y-4"
+          className="md:hidden bg-[#090f15] border-b border-[#1c2430] px-4 py-6 space-y-4"
         >
           <Link 
             to="/"

@@ -10,6 +10,7 @@ export interface Article {
     avatar: string;
   };
   image: string;
+  tags?: string[];
 }
 
 export interface AppProject {
