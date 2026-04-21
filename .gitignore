@@ -7,3 +7,5 @@ coverage/
 .env*
 !.env.example
 stitch_tech_showcase_portal/
+.blackboxcli/
+videos/
